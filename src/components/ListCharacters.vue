@@ -2,7 +2,7 @@
     <section>
         <div class="characters">
             <div class="characters__item" v-for="character in characters" :key="character.id">
-                <card-character/>
+                <card-character :character="character"/>
             </div>
         </div>
     </section>
@@ -33,3 +33,13 @@ export default {
     }
 }
 </script>
+
+
+<style>
+.characters {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    margin: 3rem 0;
+}
+</style>
